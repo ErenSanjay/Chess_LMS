@@ -1,0 +1,1 @@
+"""Chess LMS backend application."""
