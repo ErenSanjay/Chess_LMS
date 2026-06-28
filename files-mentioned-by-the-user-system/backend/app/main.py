@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import Settings, get_settings
 from app.core.logging import configure_logging
 from app.modules.auth.api import router as auth_router
+from app.modules.classrooms.api import router as classroom_router
 
 
 def create_app(settings: Settings | None = None) -> FastAPI:
@@ -42,6 +43,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         }
 
     app.include_router(auth_router)
+    app.include_router(classroom_router)
 
     return app
 

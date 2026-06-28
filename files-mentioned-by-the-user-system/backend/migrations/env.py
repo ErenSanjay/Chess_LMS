@@ -6,10 +6,12 @@ from sqlalchemy import engine_from_config, pool
 from app.core.config import get_settings
 from app.core.database import Base
 from app.modules.auth import models as auth_models
+from app.modules.classrooms import models as classroom_models
 from app.modules.organizations import models as organization_models
 from app.modules.users import models as user_models
 
 auth_models
+classroom_models
 organization_models
 user_models
 
